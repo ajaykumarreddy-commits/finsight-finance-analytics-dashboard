@@ -1,83 +1,235 @@
-# FinSight – AI-Driven Personal Finance Analytics Dashboard
+# 💰 FinSight – Personal Finance Analytics Dashboard
 
-FinSight is a full-stack financial analytics dashboard that helps users **track expenses, manage budgets, and analyze spending patterns** through interactive visualizations.
-
-This project demonstrates **full-stack development using React and FastAPI**, secure authentication with JWT, and financial data analytics using charts.
+A modern **Full Stack Personal Finance Management Application** that helps users securely track expenses, manage monthly budgets, visualize spending trends, and gain financial insights through an intuitive analytics dashboard.
 
 ---
 
-## Key Features
+## 🚀 Live Demo
 
-- Secure JWT Authentication  
-- Expense Management (Add / Edit / Delete)  
-- Monthly Budget Tracking  
-- Financial Analytics Dashboard  
-- Category, Daily & Monthly Expense Charts  
-- CSV Export for Expense Reports  
+🌐 **Frontend:** https://finsight-finance-analytics-dashboar.vercel.app
+
+⚙️ **Backend API:** https://finsight-finance-analytics-dashboard.onrender.com
+
+# ✨ Features
+
+## 🔐 Authentication
+
+- User Registration
+- Secure Login
+- JWT Authentication
+- Protected Routes
 
 ---
 
-## Tech Stack
+## 💰 Expense Management
 
-**Frontend**
+- Add Expenses
+- Update Expenses
+- Delete Expenses
+- Search Expenses
+- Export Expenses as CSV
+
+---
+
+## 📊 Analytics
+
+- Monthly Spending Analysis
+- Daily Spending Trends
+- Interactive Charts
+- Expense Summary
+
+---
+
+## 💸 Budget Management
+
+- Set Monthly Budget
+- Remaining Budget Calculation
+- Budget Usage Progress Bar
+- Spending Alerts
+
+---
+
+## 🤖 Financial Insights
+
+- Top Spending Category
+- Average Daily Spending
+- Predicted Monthly Spending
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
 - React.js
 - Tailwind CSS
+- React Router
 - Chart.js
+- Axios
 
-**Backend**
+## Backend
+
 - FastAPI
 - SQLAlchemy
 - JWT Authentication
+- Passlib
+- Python
 
-**Database**
-- SQLite
+## Database
+
+- PostgreSQL (Neon)
+
+## Deployment
+
+- Vercel (Frontend)
+- Render (Backend)
+
+## Version Control
+
+- Git
+- GitHub
 
 ---
 
-## Architecture
+# 📂 Project Structure
 
 ```
-React Frontend
-      │
-      ▼
-FastAPI Backend
-      │
-      ▼
-SQLite Database
+FinSight/
+│
+├── expense-frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── routes/
+├── models.py
+├── database.py
+├── auth.py
+├── schemas.py
+├── main.py
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## Run the Project
+# ⚙️ Installation
 
-### Backend
+## Clone Repository
+
+```bash
+git clone https://github.com/ajaykumarreddy-commits/finsight-finance-analytics-dashboard.git
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd finsight-finance-analytics-dashboard
+
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+Install dependencies
+
 ```bash
 pip install -r requirements.txt
+```
+
+Create a `.env` file
+
+```env
+DATABASE_URL=your_postgresql_database_url
+```
+
+Run backend
+
+```bash
 uvicorn main:app --reload
 ```
 
-Backend runs on  
-`http://127.0.0.1:8000`
-
 ---
 
-### Frontend
+## Frontend Setup
+
 ```bash
 cd expense-frontend
+
 npm install
+```
+
+Create a `.env` file
+
+```env
+REACT_APP_API_URL=http://localhost:8000
+```
+
+Run frontend
+
+```bash
 npm start
 ```
 
-Frontend runs on  
-`http://localhost:3000`
+---
+
+# 🔒 Authentication
+
+The application uses **JWT Authentication**.
+
+Users must log in before accessing:
+
+- Expense Management
+- Analytics
+- Budget Tracker
+- Financial Insights
 
 ---
 
-## Author
-Ajay Kumar Reddy  
-B.Tech – Computer Science (AI & Data Science)
+# 🌐 Deployment
+
+## Frontend
+
+- Vercel
+
+## Backend
+
+- Render
+
+## Database
+
+- Neon PostgreSQL
 
 ---
 
-## Repository
-https://github.com/ajaykumarreddy-commits/finsight-finance-analytics-dashboard
+# 📈 Future Enhancements
+
+- AI-powered Expense Prediction
+- OCR Bill Scanner
+- Email Reports
+- Multi-Currency Support
+- Dark Mode
+- Expense Categories with Icons
+- Monthly PDF Reports
+- Mobile Responsive Dashboard
+- Recurring Expense Tracking
+
+---
+
+# 👨‍💻 Author
+
+**Ajay Kumar Reddy**
+
+GitHub:
+https://github.com/ajaykumarreddy-commits
+
+LinkedIn:
+https://www.linkedin.com/in/ajay-kumar-reddy-golamari-869649374
+
+---
+
+# ⭐ If you like this project
+
+Please consider giving it a ⭐ on GitHub.

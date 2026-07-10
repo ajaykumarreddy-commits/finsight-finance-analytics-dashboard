@@ -6,7 +6,7 @@ function Register() {
 
   const handleRegister = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/users/register", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/users/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

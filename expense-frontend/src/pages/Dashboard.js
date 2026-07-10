@@ -19,7 +19,7 @@ function Dashboard() {
   const [insights, setInsights] = useState(null);
 
   const fetchExpenses = useCallback(async () => {
-    const res = await fetch("http://127.0.0.1:8000/expenses/all", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/expenses/all`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -31,7 +31,7 @@ function Dashboard() {
   }, [token]);
 
   const fetchBudget = useCallback(async () => {
-    const res = await fetch("http://127.0.0.1:8000/budget/current", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/budget/current`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -40,7 +40,7 @@ function Dashboard() {
   }, [token]);
 
   const fetchInsights = useCallback(async () => {
-    const res = await fetch("http://127.0.0.1:8000/insights/summary", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/insights/summary`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -62,7 +62,7 @@ function Dashboard() {
   };
 
   const addExpense = async () => {
-    const res = await fetch("http://127.0.0.1:8000/expenses/add", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/expenses/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -83,7 +83,7 @@ function Dashboard() {
   };
 
   const updateExpense = async () => {
-    const res = await fetch(`http://127.0.0.1:8000/expenses/update/${editId}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/expenses/update/${editId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -105,7 +105,7 @@ function Dashboard() {
   };
 
   const deleteExpense = async (id) => {
-    await fetch(`http://127.0.0.1:8000/expenses/delete/${id}`, {
+    await fetch(`${process.env.REACT_APP_API_URL}/expenses/delete/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -123,7 +123,7 @@ function Dashboard() {
 
   const setBudgetValue = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/budget/set", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/budget/set`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

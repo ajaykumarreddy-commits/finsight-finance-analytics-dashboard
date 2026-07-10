@@ -34,7 +34,7 @@ function Analytics() {
 
   useEffect(() => {
     const fetchCategory = async () => {
-      const res = await fetch("http://127.0.0.1:8000/analytics/category", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/analytics/category`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -46,7 +46,7 @@ function Analytics() {
       const now = new Date();
 
       const res = await fetch(
-        `http://127.0.0.1:8000/analytics/daily/${now.getFullYear()}/${now.getMonth() + 1}`,
+        `${process.env.REACT_APP_API_URL}/analytics/daily/${now.getFullYear()}/${now.getMonth() + 1}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         },
@@ -60,7 +60,7 @@ function Analytics() {
       const now = new Date();
 
       const res = await fetch(
-        `http://127.0.0.1:8000/analytics/monthly/${now.getFullYear()}/${now.getMonth() + 1}`,
+        `${process.env.REACT_APP_API_URL}/analytics/monthly/${now.getFullYear()}/${now.getMonth() + 1}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         },

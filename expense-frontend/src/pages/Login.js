@@ -4,6 +4,8 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const handleLogin = async () => {
     try {
       const formData = new URLSearchParams();
@@ -11,7 +13,7 @@ function Login() {
       formData.append("username", email);
       formData.append("password", password);
 
-      const res = await fetch("http://127.0.0.1:8000/users/login", {
+      const res = await fetch(`${API_URL}/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",

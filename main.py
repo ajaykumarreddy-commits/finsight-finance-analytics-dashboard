@@ -9,11 +9,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
+   allow_origins=[
     "http://localhost:3000",
-    "https://finsight-finance-analytics-dashboard.vercel.app",
-    "https://finsight-finance-analytics-dashboard-jrc4kwist-finsight3.vercel.app",  # Local React app
-],
+    "https://finsight-finance-analytics-dashboar.vercel.app",
+    "https://finsight-finance-analytics-dashboard-jrc4kwist-finsight3.vercel.app",
+]
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

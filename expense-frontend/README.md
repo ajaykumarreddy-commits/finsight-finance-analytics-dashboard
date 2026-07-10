@@ -1,70 +1,235 @@
-# Getting Started with Create React App
+# 💰 FinSight – Personal Finance Analytics Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern **Full Stack Personal Finance Management Application** that helps users securely track expenses, manage monthly budgets, visualize spending trends, and gain financial insights through an intuitive analytics dashboard.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+🌐 **Frontend:** https://finsight-finance-analytics-dashboar.vercel.app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+⚙️ **Backend API:** https://finsight-finance-analytics-dashboard.onrender.com
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# ✨ Features
 
-### `npm test`
+## 🔐 Authentication
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- User Registration
+- Secure Login
+- JWT Authentication
+- Protected Routes
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💰 Expense Management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Add Expenses
+- Update Expenses
+- Delete Expenses
+- Search Expenses
+- Export Expenses as CSV
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📊 Analytics
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Monthly Spending Analysis
+- Daily Spending Trends
+- Interactive Charts
+- Expense Summary
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 💸 Budget Management
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Set Monthly Budget
+- Remaining Budget Calculation
+- Budget Usage Progress Bar
+- Spending Alerts
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤖 Financial Insights
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Top Spending Category
+- Average Daily Spending
+- Predicted Monthly Spending
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 🛠 Tech Stack
 
-### Analyzing the Bundle Size
+## Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React.js
+- Tailwind CSS
+- React Router
+- Chart.js
+- Axios
 
-### Making a Progressive Web App
+## Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- FastAPI
+- SQLAlchemy
+- JWT Authentication
+- Passlib
+- Python
 
-### Advanced Configuration
+## Database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- PostgreSQL (Neon)
 
-### Deployment
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Vercel (Frontend)
+- Render (Backend)
 
-### `npm run build` fails to minify
+## Version Control
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Git
+- GitHub
+
+---
+
+# 📂 Project Structure
+
+```
+FinSight/
+│
+├── expense-frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── routes/
+├── models.py
+├── database.py
+├── auth.py
+├── schemas.py
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/ajaykumarreddy-commits/finsight-finance-analytics-dashboard.git
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd finsight-finance-analytics-dashboard
+
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a `.env` file
+
+```env
+DATABASE_URL=your_postgresql_database_url
+```
+
+Run backend
+
+```bash
+uvicorn main:app --reload
+```
+
+---
+
+## Frontend Setup
+
+```bash
+cd expense-frontend
+
+npm install
+```
+
+Create a `.env` file
+
+```env
+REACT_APP_API_URL=http://localhost:8000
+```
+
+Run frontend
+
+```bash
+npm start
+```
+
+---
+
+# 🔒 Authentication
+
+The application uses **JWT Authentication**.
+
+Users must log in before accessing:
+
+- Expense Management
+- Analytics
+- Budget Tracker
+- Financial Insights
+
+---
+
+# 🌐 Deployment
+
+## Frontend
+
+- Vercel
+
+## Backend
+
+- Render
+
+## Database
+
+- Neon PostgreSQL
+
+---
+
+# 📈 Future Enhancements
+
+- AI-powered Expense Prediction
+- OCR Bill Scanner
+- Email Reports
+- Multi-Currency Support
+- Dark Mode
+- Expense Categories with Icons
+- Monthly PDF Reports
+- Mobile Responsive Dashboard
+- Recurring Expense Tracking
+
+---
+
+# 👨‍💻 Author
+
+**Ajay Kumar Reddy**
+
+GitHub:
+https://github.com/ajaykumarreddy-commits
+
+LinkedIn:
+https://www.linkedin.com/in/ajay-kumar-reddy-golamari-869649374
+
+---
+
+# ⭐ If you like this project
+
+Please consider giving it a ⭐ on GitHub.

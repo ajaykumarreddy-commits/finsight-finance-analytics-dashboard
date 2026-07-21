@@ -6,9 +6,9 @@ A modern **Full Stack Personal Finance Management Application** that helps users
 
 ## 🚀 Live Demo
 
-🌐 **Frontend:** https://finsight-finance-analytics-dashboar.vercel.app
+🌐 https://finsight-finance-analytics-dashboar.vercel.app
 
-⚙️ **Backend API:** https://finsight-finance-analytics-dashboard.onrender.com
+
 
 # ✨ Features
 
